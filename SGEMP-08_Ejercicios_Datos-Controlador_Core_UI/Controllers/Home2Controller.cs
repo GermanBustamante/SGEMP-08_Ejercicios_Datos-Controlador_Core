@@ -13,8 +13,9 @@ namespace SGEMP_08_Ejercicios_Datos_Controlador_Core_UI.Controllers
             return View();
         }
 
+       
         [HttpPost]
-        public IActionResult Index2(string nombre)
+        public IActionResult Saludo(string nombre)
         {
             ViewBag.Nombre = nombre;
             return View();

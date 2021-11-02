@@ -1,0 +1,25 @@
+﻿@model Entidades.clsPersona 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Editar</title>
+</head>
+<body>
+
+    <form method="post" action="/Home3/PersonaModificada" >
+        <input type="text" name="Nombre" value=@Model.Nombre />
+        @Html.TextBox(Model.Apellidos, value:Model.Apellidos)<!--NO FUNCIONA-->
+        @Html.TextBoxFor(Model => Model.FechaNacimiento)
+        @Html.TextBoxFor(m => m.Direccion)
+        @Html.TextBoxFor(m => m.Telefono)
+        <input type="submit" value="Editar" />
+    </form>
+
+</body>
+</html>
