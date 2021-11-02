@@ -1,0 +1,25 @@
+﻿@model SGEMP_08_Ejercicios_Datos_Controlador_Core_UI.Models.clsIndexVM
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <form method="post">
+        <select name="Nombre">
+            @foreach (String nombrePlanta in Model.Nombres)
+            {
+                <option value=@nombrePlanta/>
+            }
+        </select>
+        <input type="submit" value="Ver Detalles" />
+    </form>
+</body>
+</html>

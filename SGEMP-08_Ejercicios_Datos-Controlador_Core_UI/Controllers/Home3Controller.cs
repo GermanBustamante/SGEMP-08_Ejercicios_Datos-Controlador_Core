@@ -11,7 +11,7 @@ namespace SGEMP_08_Ejercicios_Datos_Controlador_Core_UI.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View("Editar");
         }
 
         public IActionResult Editar()
