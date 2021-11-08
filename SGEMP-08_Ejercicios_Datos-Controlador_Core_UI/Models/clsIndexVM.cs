@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
-using Entidades;
 using DAL;
 
 namespace SGEMP_08_Ejercicios_Datos_Controlador_Core_UI.Models
@@ -18,8 +17,14 @@ namespace SGEMP_08_Ejercicios_Datos_Controlador_Core_UI.Models
 
         public clsIndexVM()
         {
-            Nombres = clsListados.getListaNombresPlantasFrayGuillermo();
+            Nombres = clsListados.getListadoNombresPlantas();
             Descripcion = "";
+        }
+
+        public clsIndexVM(String nombrePlanta)
+        {
+            Nombres = clsListados.getListadoNombresPlantas();
+            Descripcion = clsListados.getDetallesPlanta(nombrePlanta);
         }
     }
 }

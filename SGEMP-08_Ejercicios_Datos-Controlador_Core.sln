@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SGEMP-08_Ejercicios_Datos-C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades", "Entidades\Entidades.csproj", "{C83A6161-5385-45E5-8633-FD2C0BBEF218}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{786EC2C0-7104-4CA2-8528-1A4438DC9F2F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{51DD9E54-3460-44E6-BEB3-920887F875A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{C83A6161-5385-45E5-8633-FD2C0BBEF218}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C83A6161-5385-45E5-8633-FD2C0BBEF218}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C83A6161-5385-45E5-8633-FD2C0BBEF218}.Release|Any CPU.Build.0 = Release|Any CPU
-		{786EC2C0-7104-4CA2-8528-1A4438DC9F2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{786EC2C0-7104-4CA2-8528-1A4438DC9F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{786EC2C0-7104-4CA2-8528-1A4438DC9F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{786EC2C0-7104-4CA2-8528-1A4438DC9F2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51DD9E54-3460-44E6-BEB3-920887F875A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51DD9E54-3460-44E6-BEB3-920887F875A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51DD9E54-3460-44E6-BEB3-920887F875A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51DD9E54-3460-44E6-BEB3-920887F875A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

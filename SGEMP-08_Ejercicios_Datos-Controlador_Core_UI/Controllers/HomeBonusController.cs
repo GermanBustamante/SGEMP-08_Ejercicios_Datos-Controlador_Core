@@ -11,8 +11,17 @@ namespace SGEMP_08_Ejercicios_Datos_Controlador_Core_UI.Controllers
     {
         public IActionResult Index()
         {
-            clsIndexVM c = new clsIndexVM();
-            return View(c);
+            clsIndexVM oIndexVM = new clsIndexVM();
+            return View(oIndexVM);
+        }
+
+        [HttpPost]
+        public IActionResult Index(String nombrePlanta)
+        {
+
+            clsIndexVM oIndexVM = new clsIndexVM(nombrePlanta);
+            
+            return View(oIndexVM);
         }
     }
 }
