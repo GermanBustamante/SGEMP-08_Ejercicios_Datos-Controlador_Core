@@ -16,10 +16,10 @@ namespace SGEMP_08_Ejercicios_Datos_Controlador_Core_UI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(String nombrePlanta)
+        public IActionResult Index(String selectPlantas)
         {
 
-            clsIndexVM oIndexVM = new clsIndexVM(nombrePlanta);
+            clsIndexVM oIndexVM = new clsIndexVM(selectPlantas);
             
             return View(oIndexVM);
         }

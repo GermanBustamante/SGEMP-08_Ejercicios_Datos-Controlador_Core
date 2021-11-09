@@ -13,15 +13,14 @@
 </head>
 <body>
     <form method="post">
-        <select name="nombrePlanta">
+        <select name="selectPlantas">
             @foreach (String nombrePlanta in Model.Nombres)
             {
-                <option>@nombrePlanta</option>
+            <option value=@nombrePlanta>@nombrePlanta</option>
             }
         </select>
-        <div>@Model.Descripcion</div>
         <input type="submit" value="Ver Detalles" />
-
     </form>
+    <p>@Model.Descripcion</p>
 </body>
 </html>

@@ -1,41 +1,44 @@
 ﻿using Entidades;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace DAL
 {
     public class clsListados
     {
+        #region propiedades publicas
+        public List<clsPlanta> listadoPlantas { get; set; }
+        #endregion
+
+        //SE PUEDE HACER ESTÁTICO
+        #region constructores
+        public clsListados()
+        {
+            listadoPlantas = getListaPlantasFrayGuillermo();
+        }
+        #endregion
+
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="nombre"></param>
         /// <returns></returns>
-        public static String getDetallesPlanta(String nombre)
+        public String getDetallesPlanta(String nombre)
         {
-            bool obtenidoDetalles = false;
-            String descripcionPlanta = null;
-            ObservableCollection<clsPlanta> listadoPlantas = getListaPlantasFrayGuillermo();
-            for (int i = 0; i< listadoPlantas.Count && !obtenidoDetalles; i++)
-            {
-                if (listadoPlantas[i].Nombre.Equals(nombre))
-                {
-                    descripcionPlanta = listadoPlantas[i].Descripcion;
-                    obtenidoDetalles = true;
-
-                }
-            }
-            return descripcionPlanta;
+            return nombre == "" ? "":(listadoPlantas.Find(plant => plant.Nombre.Equals(nombre)).Descripcion);
+            //ojo, observableCollection no tiene Find()
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        public static ObservableCollection<String> getListadoNombresPlantas()
+        public List<String> getListadoNombresPlantas()
         {
-            ObservableCollection<String> listadoNombresPlantas = new ObservableCollection<string>();
-            foreach (clsPlanta oPlanta in getListaPlantasFrayGuillermo())
+            List<String> listadoNombresPlantas = new List<string>();
+            foreach (clsPlanta oPlanta in listadoPlantas)
             {
                 listadoNombresPlantas.Add(oPlanta.Nombre);
             }
@@ -46,9 +49,9 @@ namespace DAL
         /// 
         /// </summary>
         /// <returns></returns>
-        private static ObservableCollection<clsPlanta> getListaPlantasFrayGuillermo()
+        private List<clsPlanta> getListaPlantasFrayGuillermo()
         {
-            ObservableCollection<clsPlanta> listadoPlantas = new ObservableCollection<clsPlanta>();
+            List<clsPlanta> listadoPlantas = new List<clsPlanta>();
             listadoPlantas.Add(new clsPlanta("Aloe Vera", "De la familia de las Asphodelaceae, pertenece al género Aloe, que cuenta con más de 350 especies vegetales. Esta especie, muy habitual entre las plantas de interior, tiene infinidad de aplicaciones en diversos remedios naturales, especialmente para los de la piel. Entre ellas, la de aliviar las quemaduras, rozaduras e, incluso, psoriasis y picaduras de insectos."));
             listadoPlantas.Add(new clsPlanta("Valeriana", "La valeriana o Valeriana officinalis es una de las plantas medicinales más empleadas en la fitoterapia. Y es normal, ya que tiene infinidad de beneficios pero quizás el más conocido sea el ayudar a relajarnos. La valeriana es una planta que disminuye la ansiedad y ayuda a dormir."));
             listadoPlantas.Add(new clsPlanta("Amapola", "La amapola o Papaver rhoeas L., es una planta curativa de la que se usan las semillas. Con estas semillas se consigue prevenir enfermedades cardiovasculares, anemias o afecciones de la piel."));
